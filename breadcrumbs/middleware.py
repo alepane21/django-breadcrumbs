@@ -9,8 +9,6 @@ class BreadcrumbsMiddleware(object):
 
     def process_request(self, request):
         request.breadcrumbs = Breadcrumbs()
-        request.breadcrumbs._clean()
-
 
 class FlatpageFallbackMiddleware(object):
     def process_response(self, request, response):
